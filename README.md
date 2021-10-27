@@ -14,6 +14,8 @@ content cannot be inspected easily since it is encrypted.
 
 ## Reverse Proxy (Ngrok/Cloudfared ) vs Load Balancer ##
 
+![Reverse-proxy](https://user-images.githubusercontent.com/13198518/139104316-d25645d5-df26-49f8-b040-b8b8a1248b83.png)
+
 They are often the same thing. But not always. When you refer to a load balancer you are referring to a very specific thing - a server or device that balances inbound requests across two or more web servers to spread the load. A reverse proxy, however, typically has any number of features:
 
 1. load balancing

@@ -12,3 +12,14 @@ to detect and block since they are usually allowed to be
 open by default. When it uses port 443 (SSL), network
 content cannot be inspected easily since it is encrypted. 
 
+## Reverse Proxy (Ngrok/Cloudfared ) vs Load Balancer ##
+
+They are often the same thing. But not always. When you refer to a load balancer you are referring to a very specific thing - a server or device that balances inbound requests across two or more web servers to spread the load. A reverse proxy, however, typically has any number of features:
+
+1. load balancing
+
+2. caching: it can cache content from the web server(s) behind it and thereby reduce the load on the web server(s) and return some static content back to the requester without having to get the data from the web server(s)
+
+3. security: it can protect the web server(s) by preventing direct access from the internet; it might do this through simple means by just obfuscating the web server(s) or it may have some more active components that actually review inbound requests looking for malicious code
+
+4. SSL acceleration: when SSL is used; it may serve as a termination point for those SSL sessions so that the workload of dealing with the encryption is offloaded from the web server(s)

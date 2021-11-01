@@ -28,3 +28,8 @@ int main () {
 	return 0;
 
 }
+
+
+// Reverse shells have multiple advantages to bind shells, particularly with evading detection and bypassing certain rule sets. 
+// Plus, having a port listening on a host that is not normal will, for the most part, trigger more alerts to system/network administrators.
+// Whereas a reverse shell will just show up as a connection to an outside IP address,which will get caught less, especially with certain obfuscation techniques.

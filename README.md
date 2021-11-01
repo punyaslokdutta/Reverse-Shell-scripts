@@ -14,6 +14,13 @@ open by default. When it uses port 443 (SSL), network
 content cannot be inspected easily since it is encrypted. 
 Today's cryptosystems (such as TLS, Secure Shell) use both symmetric encryption and asymmetric encryption, often by using asymmetric encryption to securely exchange a secret key which is then used for symmetric encryption.
 
+## Preventing Reverse Shells ##
+Unless you are deliberately using reverse shells for remote administration, any reverse shell connections are likely to be malicious. Unfortunately, there’s also no surefire way of blocking reverse shell connections on a networked system, especially a server. You can mitigate the risk by selectively hardening your system:
+
+1. To limit exploitation, you can lock down outgoing connectivity to allow only specific remote IP addresses and ports for the required services. This might be achieved by sandboxing or running the server in a minimal container. Another way could be to set up a proxy server with tightly controlled destination restrictions. However, considering that reverse shells can be created even over DNS, such hardening can only limit the risk of reverse shell connections, not eliminate it. 
+2. To make attacks a little more difficult, you can remove all unnecessary tools and interpreters to prevent the execution of at least some reverse shell codes. However, this is usually not a practical option except for the most hardened and specialized servers, and a determined attacker will eventually find a working shell script anyway.
+3. Regardless of the technicalities, once an attacker has a way of executing OS commands, the system should be considered compromised – so the best protection from reverse shells is to prevent exploitation in the first place. Shell scripts are typically executed by exploiting a code injection vulnerability, often followed by privilege escalation to obtain root privileges. To avoid these and other vulnerabilities, it’s vital to regularly patch your servers and web applications, and test them using a proven vulnerability scanner.
+
 ## Reverse Proxy (Ngrok/Cloudfared ) vs Load Balancer ##
 
 ![Reverse-proxy](https://user-images.githubusercontent.com/13198518/139104316-d25645d5-df26-49f8-b040-b8b8a1248b83.png)

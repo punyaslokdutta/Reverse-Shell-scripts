@@ -14,6 +14,8 @@ open by default. When it uses port 443 (SSL), network
 content cannot be inspected easily since it is encrypted. 
 Today's cryptosystems (such as TLS, Secure Shell) use both symmetric encryption and asymmetric encryption, often by using asymmetric encryption to securely exchange a secret key which is then used for symmetric encryption.
 
+Reverse shells have multiple advantages to bind shells, particularly with evading detection and bypassing certain rule sets. Plus, having a port listening on a host that is not normal will, for the most part, trigger more alerts to system/network administrators. Whereas a reverse shell will just show up as a connection to an outside IP address,which will get caught less, especially with certain obfuscation techniques.
+
 ## Preventing Reverse Shells ##
 Unless you are deliberately using reverse shells for remote administration, any reverse shell connections are likely to be malicious. Unfortunately, there’s also no surefire way of blocking reverse shell connections on a networked system, especially a server. You can mitigate the risk by selectively hardening your system:
 

@@ -1,6 +1,7 @@
 # Reverse-Shell-scripts
 A reverse shell is a shell session established on a connection that is initiated from a remote machine, not from the local host. Attackers who successfully exploit a remote command execution vulnerability can use a reverse shell to obtain an interactive shell session on the target machine and continue their execution.
 
+
 ![Architecture-2](https://user-images.githubusercontent.com/13198518/138933225-e9160bd6-5c99-476b-bcf0-36c705abbc38.png)
 
 Reverse shell connection is usually established via TCP
@@ -11,6 +12,7 @@ firewall and other network parameter security solutions
 to detect and block since they are usually allowed to be
 open by default. When it uses port 443 (SSL), network
 content cannot be inspected easily since it is encrypted. 
+Today's cryptosystems (such as TLS, Secure Shell) use both symmetric encryption and asymmetric encryption, often by using asymmetric encryption to securely exchange a secret key which is then used for symmetric encryption.
 
 ## Reverse Proxy (Ngrok/Cloudfared ) vs Load Balancer ##
 

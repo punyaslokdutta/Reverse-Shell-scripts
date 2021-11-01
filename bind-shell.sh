@@ -49,7 +49,7 @@ section .text
 
 	xor esi, esi	; clear out esi to use as a pointer
 	xor edx, edx	; clear out edx
-	mov ax, 364	; syscall accept4 (since accept doesn't return any value, and with no flag set accept4 acts identical to accept)
+	mov ax, 364	; syscall accept4 (since accept doesnt return any value, and with no flag set accept4 acts identical to accept)
 	
 	int 0x80	; executing awaiting connections
 

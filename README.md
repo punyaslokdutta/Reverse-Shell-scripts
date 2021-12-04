@@ -45,10 +45,4 @@ In regards to your questions, it is not uncommon to see the both used in conjunc
 Reverse proxies are a critical component of microservices applications. They provide an externally reachable endpoint for services along with performance enhancements as mentioned above; in a Kubernetes environment, they are called Ingress Controllers. In addition to primary request routing, reverse proxies can provide more advanced routing functions such as load balancing, circuit breakers, rate limiting, A/B deployment, and canary testing. Service Meshes, more about these in a later article, utilize the advanced capabilities of proxies to enable their functionality. Some of the proxy implementations additionally offer simple tracing support, producing Zipkin or Jaeger (OpenTracing compliant) spans for the requests they route.
 
 
-## NETWORK SCANNING ##
-
-nmap -sn 10.11.1.1/24
-nmap -sn 10.11.1.1-253
-nmap -sn 10.11.1.*
-
 

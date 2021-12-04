@@ -47,8 +47,8 @@ Reverse proxies are a critical component of microservices applications. They pro
 
 ## NETWORK SCANNING ##
 
-1.netdiscover -i eth0
-2.netdiscover -r 10.11.1.1/24
-3.
+nmap -sn 10.11.1.1/24
+nmap -sn 10.11.1.1-253
+nmap -sn 10.11.1.*
 
 
